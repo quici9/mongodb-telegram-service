@@ -10,7 +10,6 @@ This service listens to changes in a specific MongoDB collection using MongoDB C
 - [Usage](#usage)
 - [Technologies Used](#technologies-used)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## Requirements
 
