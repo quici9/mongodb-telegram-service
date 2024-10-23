@@ -24,21 +24,21 @@ Before running this project, make sure you have the following installed:
 ## Installation
 
 1. Clone the repository:
-   \`\`\`bash
+   ```bash
    git clone https://github.com/your-username/your-repository.git
    cd your-repository
-   \`\`\`
+   ````
 
 2. Install dependencies:
-   \`\`\`bash
+   ```bash
    npm install
-   \`\`\`
+   ```
 
 ## Environment Setup
 
 You need to set up environment variables by creating a .env file in the root directory of the project. The following variables are required:
 
-\`\`\`env
+```env
 # MongoDB Configuration
 MONGODB_URI=your_mongodb_connection_string
 MONGODB_DB=your_database_name
@@ -47,7 +47,7 @@ MONGODB_COLLECTION=your_collection_name
 # Telegram Bot Configuration
 TELEGRAM_BOT_TOKEN=your_telegram_bot_token
 TELEGRAM_CHAT_ID=your_telegram_chat_id
-\`\`\`
+```
 
 - **MONGODB_URI**: Your MongoDB connection string.
 - **MONGODB_DB**: The database name.
@@ -59,9 +59,9 @@ TELEGRAM_CHAT_ID=your_telegram_chat_id
 
 Once the setup is complete, you can start the service by running:
 
-\`\`\`bash
+```bash
 npm start
-\`\`\`
+```
 
 This will:
 - Connect to MongoDB and start listening for insert events.
