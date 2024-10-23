@@ -24,7 +24,7 @@ Before running this project, make sure you have the following installed:
 
 1. Clone the repository:
    ```bash
-   git clone [https://github.com/your-username/your-repository.git](https://github.com/quici9/mongodb-telegram-service.git)
+   git clone https://github.com/your-username/your-repository.git
    cd mongodb-telegram-service
    ````
 
