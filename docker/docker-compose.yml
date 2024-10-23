@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  mongo-primary:
+    image: mongo:latest
+    container_name: mongo-primary
+    ports:
+      - "27017:27017"
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=password
+      - MONGO_INITDB_DATABASE=zm
+    command: --replSet rs0 --keyFile /etc/mongo/mongo-keyfile
+    volumes:
+      - mongo-primary-data:/data/db
+      - ./mongo-keyfile:/etc/mongo/mongo-keyfile:ro
+
+  mongo-secondary:
+    image: mongo:latest
+    container_name: mongo-secondary
+    ports:
+      - "27018:27017"
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=password
+      - MONGO_INITDB_DATABASE=zm
+    command: --replSet rs0 --keyFile /etc/mongo/mongo-keyfile
+    volumes:
+      - mongo-secondary-data:/data/db
+      - ./mongo-keyfile:/etc/mongo/mongo-keyfile:ro
+
+volumes:
+  mongo-primary-data:
+  mongo-secondary-data:
