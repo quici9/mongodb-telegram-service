@@ -11,10 +11,10 @@ if (!telegramConfig.botToken) {
 }
 
 // Check if chatId is defined
-if (!telegramConfig.chatId) {
-    console.error('Error: Telegram chat ID is undefined. Please set the TELEGRAM_CHAT_ID in your environment variables.');
-    process.exit(1);
-}
+// if (!telegramConfig.chatId) {
+//     console.error('Error: Telegram chat ID is undefined. Please set the TELEGRAM_CHAT_ID in your environment variables.');
+//     process.exit(1);
+// }
 
 const bot = new Bot(telegramConfig.botToken);
 

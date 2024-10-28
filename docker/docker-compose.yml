@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   mongo-primary:
-    image: mongo:latest
+    image: mongo:7.0.3
     container_name: mongo-primary
     ports:
       - "27017:27017"
@@ -16,7 +16,7 @@ services:
       - ./mongo-keyfile:/etc/mongo/mongo-keyfile:ro
 
   mongo-secondary:
-    image: mongo:latest
+    image: mongo:7.0.3
     container_name: mongo-secondary
     ports:
       - "27018:27017"
